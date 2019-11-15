@@ -9,7 +9,7 @@ module.exports = function generateToken(user) {
     expiresIn: '1d'
   };
 
-  const result = jwt.sign(payload, process.env.SECRET, options);
+  const result = jwt.sign(payload, 'keep it secret keep it safe', options);
 
   return result;
 };
